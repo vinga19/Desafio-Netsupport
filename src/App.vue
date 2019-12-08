@@ -22,7 +22,7 @@
               
               <tr class="dif" v-for="Info in info" :key="Info.id">
                 <td>{{ Info.id_job }}</td>
-                <td>{{ Info.situacao }}</td>
+                <td>{{ Info.situacao}}</td>
                 <td>{{ Info.status }}</td>
                 <td>{{ Info.tipo_servico }}</td>
                 <td>{{ Info.cidade }}</td>
@@ -48,9 +48,10 @@ export default{
   nome: "App",
   data(){
     return{ 
-      info: {}
+      info: []
     }
  },
+ 
 
  mounted(){
    Agenda.listar().then(resposta =>{
@@ -66,11 +67,19 @@ export default{
 </script>
 
 <style>
+
 budy,html
 {
   width: auto;
   height: auto;
+  
 }
+
+/*body{
+  background-image: url('../src/assets/branca.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}*/
 h2
 {
   text-align: center;
@@ -99,6 +108,7 @@ table
     border-collapse: collapse;
     text-align: center; 
     border-color: SkyBlue;
+    
     
     
 }
