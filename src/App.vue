@@ -22,7 +22,7 @@
               
               <tr class="dif" v-for="Info in info" :key="Info.id">
                 <td>{{ Info.id_job }}</td>
-                <td id="color">{{ Info.situacao }}</td>
+                <td>{{ Info.situacao }}</td>
                 <td>{{ Info.status }}</td>
                 <td>{{ Info.tipo_servico }}</td>
                 <td>{{ Info.cidade }}</td>
@@ -96,8 +96,6 @@ tbody td:nth-child(odd) {
 
 table
 {
-    
-    background: #FFFFF0;
     border-collapse: collapse;
     text-align: center; 
     border-color: SkyBlue;
